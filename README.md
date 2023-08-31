@@ -32,6 +32,27 @@ curl -XPOST -H "Content-Type: application/json" http://127.0.0.1:9292/ -d '{"htm
 ```
 An HTML 3.0 should be returned.
 
+# Endpoints
+## HTML
+```
+curl -XPOST -H "Content-Type: application/json" http://127.0.0.1:9292/html -d '{"html": "<a href=\"#\" class=\"btn btn-primary\">Button</a>"}'
+```
+## Plain text
+```
+curl -XPOST -H "Content-Type: application/json" http://127.0.0.1:9292/plaintext -d '{"html": "<a href=\"#\" class=\"btn btn-primary\">Button</a>"}'
+```
+## Multipart
+```
+curl -XPOST -H "Content-Type: application/json" http://127.0.0.1:9292/multipart -d '{"html": "<a href=\"#\" class=\"btn btn-primary\">Button</a>"}'
+```
+
+# Options
+## scss
+Optional SASS variables to customize colors, sizes, etc, can be passed as a string:
+```
+curl -XPOST -H "Content-Type: application/json" http://127.0.0.1:9292/ -d '{"html": "<a href=\"#\" class=\"btn btn-primary\">Button</a>", "scss": "$primary: #000000;"}'
+```
+
 # Stack:
 - ruby (3.2)
 - rack (2.2)
