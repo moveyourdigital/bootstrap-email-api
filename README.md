@@ -56,6 +56,6 @@ curl -XPOST -H "Content-Type: application/json" http://127.0.0.1:9292/ -d '{"htm
 # Stack:
 - ruby (3.2)
 - rack (2.2)
-- puma (2.2)
+- puma (6.3)
 - hanami-api (0.3)
 - bootstrap-email (1.4.0)
