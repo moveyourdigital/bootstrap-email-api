@@ -2,9 +2,9 @@ FROM ruby:3.2
 
 WORKDIR /srv
 
-COPY Gemfile ./
+COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
-COPY . .
+COPY config.ru ./
 
 CMD ["bundle", "exec", "rackup --host 0.0.0.0"]
